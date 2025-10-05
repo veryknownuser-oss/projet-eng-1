@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SKINWIZ Hair Selector</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      height: 100vh;
+      background-color: #f0f2f5;
+    }
+
+    .sidebar {
+      width: 220px;
+      background-color: #2c3e50;
+      color: white;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #34495e;
+      padding: 20px;
+      font-size: 18px;
+      border-radius: 0;
+      width: 100%;
+      box-sizing: border-box;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-item:hover {
+      background-color: #3d566e;
+    }
+
+    .main {
+      flex: 1;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .product {
+      padding: 20px;
+      border-radius: 12px;
+      color: white;
+      text-align: center;
+      font-weight: 600;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .approved {
+      background-color: #27ae60;
+    }
+
+    .disapproved {
+      background-color: #c0392b;
+    }
+
+    .product img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      background-color: white;
+      padding: 5px;
+    }
+
+    .question-box {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      border-radius: 30px;
+      padding: 10px 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .question-box input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 16px;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+    }
+    .icon {
+      font-size: 20px;
+      margin-left: 15px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="nav-item" onclick="location.href='index.html'">🏠 Home</div>
+    <div class="nav-item">🧴 <span><a href="skin.html">Skin</a></span></div>
+    <div class="nav-item">💇 <span><a href="hair.html">Hair</a></span></div>
+    <div class="nav-item">📍 <span><a href="store.html">Store Locator</a></span></div>
+  </div>
+
+  <div class="main">
+    <div class="products">
+      <div class="product approved">
+        <img src="https://cdn.shopify.com/s/files/1/0661/9630/7113/products/OlaplexNo3_600x.jpg" alt="Olaplex No.3">
+        No.3 Hair Perfector ✅
+      </div>
+      <div class="product approved">
+        <img src="https://cdn.shopify.com/s/files/1/0661/9630/7113/products/BriogeoScalpRevival_600x.jpg" alt="Scalp Revival">
+        Scalp Revival Scrub ✅
+      </div>
+      <div class="product disapproved">
+        <img src="https://cdn.shopify.com/s/files/1/0661/9630/7113/products/PanteneShampoo_600x.jpg" alt="Pantene Shampoo">
+        Pantene Shampoo ❌
+      </div>
+      <div class="product disapproved">
+        <img src="https://cdn.shopify.com/s/files/1/0661/9630/7113/products/TresemmeConditioner_600x.jpg" alt="Tresemmé Conditioner">
+        Tresemmé Conditioner ❌
+      </div>
+    </div>
+
+    <div class="question-box">
+      <input type="text" placeholder="Type your question here..." />
+      <div class="icon">📷</div>
+      <div class="icon">🎤</div>
+    </div>
+  </div>
+</body>
+</html>
